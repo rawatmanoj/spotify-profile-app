@@ -1,0 +1,143 @@
+@import "../Styles/variables";
+
+.innerplaylist-container {
+  // overflow: hidden;
+  min-height: 100vh;
+  color: white;
+  margin-left: 10rem;
+  background: $base-color;
+  width: 100%;
+  padding-bottom: 10rem;
+
+  .innerplaylist {
+    margin-top: 10rem;
+
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    .innerplaylist-left-container {
+      display: flex;
+      flex-direction: column;
+      // justify-content: center;
+      align-items: center;
+      text-align: center;
+
+      .audio-features-heading {
+        margin-top: 3rem;
+        font-size: 1.8rem;
+        font-weight: 700;
+      }
+      .get-recommendations-button {
+        text-decoration: inherit;
+        // width: max-content;
+        font-family: $font-Roboto;
+        font-weight: 900;
+        font-size: 1.1rem;
+        letter-spacing: 0.18rem;
+        padding: 1rem;
+        background: $standout-color;
+        color: inherit;
+        margin: 2rem;
+        border-radius: 10rem;
+      }
+
+      .innerplaylist-left-div-container {
+        width: 30rem;
+        height: 30rem;
+
+        .innerplaylist-image {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      text-align: center;
+      .innerplaylist-left-name {
+        margin-top: 1.2rem;
+        font-size: 2.8rem;
+        font-weight: 700;
+        font-family: $font-Lato;
+      }
+
+      .innerplaylist-left-description {
+        margin-top: 0.5rem;
+        font-size: 1.3rem;
+        font-weight: 700;
+        font-family: $font-AlegreyaSans;
+        letter-spacing: 0.01rem;
+        color: #9b9b8f;
+      }
+
+      .innerplaylist-left-total-tracks {
+        margin-top: 0.5rem;
+        font-size: 1.3rem;
+        font-weight: 700;
+        font-family: $font-Roboto;
+        letter-spacing: 0.1rem;
+      }
+    }
+
+    .innerplaylist-right-conatiner {
+      // width: 70rem;
+    }
+
+    .innerplaylist-right-lower {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .innerplaylist-right {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .innerplaylist-right-div-container {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          max-width: 70rem;
+
+          .innerplaylist-right-image-container {
+            width: 5rem;
+            height: 5rem;
+            text-align: center;
+
+            .innerplaylist-right-image {
+              width: 100%;
+              height: 100%;
+            }
+          }
+
+          .innerplaylist-right-info {
+            padding-left: 1rem;
+            padding-right: 8rem;
+            .innerplaylist-right-name {
+              font-size: 1.6rem;
+              font-family: $font-Lato bold;
+            }
+
+            .innerplaylist-right-artists-container {
+              color: rgb(124, 122, 122);
+              font-family: $font-Lato bold;
+              font-size: 1.4rem;
+              display: flex;
+              flex-direction: row;
+            }
+          }
+
+          .innerplaylist-right-time {
+            color: rgb(124, 122, 122);
+            font-family: $font-Lato bold;
+            font-size: 1.5rem;
+            text-align: end;
+            flex: 1;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,56 @@
+.nav-container {
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  width: 10rem; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background: #1c262b;
+  overflow-x: auto; /* Disable horizontal scroll */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .navbar {
+    color: rgb(155, 154, 154);
+
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 45rem;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: space-around;
+    // align-items: center;
+    font-size: 3rem;
+
+    .nav-name {
+      text-align: center;
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+
+    .nav-button-container {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-content: center;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+    }
+
+    .nav-button-container:hover {
+      background-color: black;
+    }
+
+    .nav-button {
+      margin-right: auto;
+      margin-left: auto;
+      text-decoration: none;
+      color: inherit;
+      text-align: center;
+    }
+  }
+}

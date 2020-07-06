@@ -1,0 +1,76 @@
+@import "../Styles/variables";
+.topartists-container {
+  min-height: 100vh;
+  color: white;
+  margin-left: 10rem;
+  background: $base-color;
+  width: 100%;
+  padding-bottom: 10rem;
+  .header {
+    padding-top: 10rem;
+
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    .header-topartists {
+      font-size: 1.3rem;
+      font-family: $font-Roboto;
+      //   width: 30rem;
+      margin-left: 10rem;
+    }
+
+    .header-timer {
+      //  border-bottom: 2px solid white;
+      margin-right: 2rem;
+      font-size: 1.1rem;
+      font-family: $font-Lato;
+      width: 34rem;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+
+      .header-button {
+        background: $base-color;
+        font-size: 1.7rem;
+        border: none;
+        color: white;
+        transition: all 0.4s ease;
+      }
+      .header-button-active {
+        border-bottom: 1.5px solid $standout-color;
+      }
+    }
+  }
+
+  .topartist-lower {
+    margin-top: 5rem;
+    width: 90%;
+    margin-left: auto;
+    .topartist {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+
+      .topartist-image-container {
+        width: 20rem;
+        height: 20rem;
+        text-align: center;
+        padding: 3rem;
+
+        .topartists-image {
+          border-radius: 50%;
+          width: 100%;
+          height: 100%;
+        }
+
+        .topartists-name {
+          padding-top: 1rem;
+          font-size: 1.5rem;
+          font-family: $font-AlegreyaSans;
+        }
+      }
+    }
+  }
+}

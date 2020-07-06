@@ -1,0 +1,71 @@
+@import "../Styles/variables";
+.recent-container {
+  overflow: hidden;
+  min-height: 100vh;
+  color: white;
+  margin-left: 10rem;
+  background: $base-color;
+  width: 100%;
+  padding-bottom: 10rem;
+
+  .recent-heading {
+    padding-top: 10rem;
+    font-size: 1.3rem;
+    // font-family: $font-Roboto bold;
+    padding-left: 8rem;
+  }
+
+  .recent-lower {
+    margin-top: 5rem;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    .recent {
+      display: flex;
+      flex-direction: column;
+
+      .recent-div-container {
+        display: flex;
+        flex-direction: row;
+
+        justify-content: space-between;
+        align-items: center;
+        width: 120rem;
+        .recent-image-container {
+          width: 5rem;
+          height: 5rem;
+          text-align: center;
+
+          .recent-image {
+            width: 100%;
+            height: 100%;
+          }
+        }
+
+        .recent-info {
+          padding-left: 1rem;
+          .recent-name {
+            font-size: 1.6rem;
+            font-family: $font-Lato bold;
+          }
+
+          .recent-artists-container {
+            color: rgb(124, 122, 122);
+            font-family: $font-Lato bold;
+            font-size: 1.4rem;
+            display: flex;
+            flex-direction: row;
+          }
+        }
+
+        .recent-time {
+          color: rgb(124, 122, 122);
+          font-family: $font-Lato bold;
+          font-size: 1.5rem;
+          text-align: end;
+          flex: 1;
+        }
+      }
+    }
+  }
+}

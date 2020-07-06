@@ -1,0 +1,66 @@
+@import "../Styles/variables";
+
+.recommendations-conatiner {
+  min-height: 100vh;
+  color: white;
+  margin-left: 10rem;
+  background: $base-color;
+  width: 100%;
+  padding-bottom: 10rem;
+
+  .recommendations-lower {
+    margin-top: 5rem;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    .recommendations {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+
+      .recommendations-div-container {
+        display: flex;
+        flex-direction: row;
+
+        // padding: 2rem;
+        justify-content: space-between;
+        align-items: center;
+        // width: 120rem;
+        .recommendations-image-container {
+          width: 5rem;
+          height: 5rem;
+          text-align: center;
+
+          .recommendations-image {
+            width: 100%;
+            height: 100%;
+          }
+        }
+
+        .recommendations-info {
+          padding-left: 1rem;
+          .recommendations-name {
+            font-size: 1.6rem;
+            font-family: $font-Lato bold;
+          }
+
+          .recommendations-artists-container {
+            color: rgb(124, 122, 122);
+            font-family: $font-Lato bold;
+            font-size: 1.4rem;
+            display: flex;
+            flex-direction: row;
+          }
+        }
+
+        .recommendations-time {
+          color: rgb(124, 122, 122);
+          font-family: $font-Lato bold;
+          font-size: 1.5rem;
+          text-align: end;
+          flex: 1;
+        }
+      }
+    }
+  }
+}

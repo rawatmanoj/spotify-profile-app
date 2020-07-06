@@ -1,0 +1,95 @@
+@import "../Styles/variables";
+
+.artist-container {
+  min-height: 100vh;
+  color: white;
+  margin-left: 10rem;
+  background: $base-color;
+  width: 100%;
+  padding-bottom: 10rem;
+
+  .main-artist-div {
+    margin-top: 10rem;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    // width: 50rem;
+
+    .artist-image-conatiner {
+      width: 30rem;
+      height: 30rem;
+
+      .artist-image {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+      }
+    }
+
+    .artist-name {
+      font-size: 5.5rem;
+      font-family: $font-Roboto bolder;
+      font-weight: 900;
+    }
+    .artist-info {
+      text-align: center;
+      margin-top: 3rem;
+
+      width: 70rem;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      // align-items: center;
+
+      .artist-info-box {
+        color: $standout-color;
+        font-size: 2.5rem;
+        font-family: $font-RobotoSlab;
+      }
+
+      .artist-info-heading {
+        color: rgb(124, 122, 122);
+        font-size: 1.4rem;
+        font-family: $font-RobotoSlab;
+        font-weight: bold;
+      }
+    }
+
+    .follow-button-container {
+      margin-top: 5rem;
+      width: 50rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .artist-follow-button {
+        font-size: 1.2rem;
+        font-family: $font-Roboto;
+        font-weight: 700;
+        letter-spacing: 0.1rem;
+        background-color: $standout-color;
+        border: 0;
+        border-radius: 2rem;
+        width: 18rem;
+        height: 4rem;
+      }
+
+      .artist-alreadyfollowing-button {
+        color: white;
+        font-family: $font-Roboto;
+        font-weight: 700;
+        font-size: 1.2rem;
+        letter-spacing: 0.1rem;
+        background-color: $base-color;
+        border: 1.5px solid $standout-color;
+        border-radius: 2rem;
+        width: 18rem;
+        height: 4rem;
+      }
+    }
+  }
+}

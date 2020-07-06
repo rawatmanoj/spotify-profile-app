@@ -1,0 +1,54 @@
+@import "../Styles/variables";
+
+.playlist-container {
+  overflow: hidden;
+  min-height: 100vh;
+  color: white;
+  margin-left: 10rem;
+  background: $base-color;
+  width: 100%;
+  padding-bottom: 10rem;
+
+  .header-playlists {
+    padding-top: 10rem;
+    font-size: 1.3rem;
+    font-family: $font-Roboto;
+    //   width: 30rem;
+    margin-left: 10rem;
+  }
+
+  .playlist-lower {
+    margin-top: 5rem;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+
+    .playlist {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+
+      .playlist-image-container {
+        width: 22rem;
+        height: 22rem;
+        text-align: center;
+
+        .playlist-image {
+          width: 100%;
+          height: 100%;
+        }
+        .playlist-name {
+          padding-top: 1rem;
+          font-size: 1.5rem;
+          font-family: $font-AlegreyaSans;
+        }
+        .playlist-total-tracks {
+          font-size: 1.4rem;
+          color: #9b9b8f;
+          font-family: $font-Lato;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}
