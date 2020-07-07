@@ -10,11 +10,11 @@ var client_secret = process.env.CLIENT_SECRET; // Your secret
 var redirect_uri = process.env.REDIRECT_URI || "http://localhost:8888/callback"; // Your redirect uri
 let FRONTEND_URI = process.env.FRONTEND_URI || "http://localhost:3000";
 const PORT = process.env.PORT || 8888;
-console.log(process.env.CLIENT_ID);
+
 /**
  * Generates a random string containing numbers and letters
  * @param  {number} length The length of the string
- * @return {string} The generated string
+ * @return {string} The generated strin
  */
 var generateRandomString = function (length) {
   var text = "";
