@@ -1,22 +1,15 @@
-/**
- * This is an example of a basic node.js script that performs
- * the Authorization Code oAuth2 flow to authenticate against
- * the Spotify Accounts.
- *
- * For more information, read
- * https://developer.spotify.com/web-api/authorization-guide/#authorization_code_flow
- */
-
+require("dotenv").config({ path: "../.env" });
 var express = require("express"); // Express web server framework
 var request = require("request"); // "Request" library
 var cors = require("cors");
 var querystring = require("querystring");
 var cookieParser = require("cookie-parser");
 
-var client_id = "ce029a41868d4e8881b0de8e8c353a85"; // Your client id
-var client_secret = "c5e10b0bc33b4a978010199af225fc54"; // Your secret
-var redirect_uri = "http://localhost:8888/callback"; // Your redirect uri
-
+var client_id = process.env.CLIENT_ID; // Your client id
+var client_secret = process.env.CLIENT_SECRET; // Your secret
+var redirect_uri = process.env.REDIRECT_URI || "http://localhost:8888/callback"; // Your redirect uri
+let FRONTEND_URI = process.env.FRONTEND_URI || "http://localhost:3000";
+console.log(process.env.CLIENT_ID);
 /**
  * Generates a random string containing numbers and letters
  * @param  {number} length The length of the string
@@ -110,20 +103,29 @@ app.get("/callback", function (req, res) {
         });
 
         // we can also pass the token to the browser to make requests from there
+        //   res.redirect(
+        //     "http://localhost:3000/#" +
+        //       querystring.stringify({
+        //         access_token: access_token,
+        //         refresh_token: refresh_token,
+        //       })
+        //   );
+        // } else {
+        //   res.redirect(
+        //     "/#" +
+        //       querystring.stringify({
+        //         error: "invalid_token",
+        //       })
+        //   );
+        // }
         res.redirect(
-          "http://localhost:3000/#" +
-            querystring.stringify({
-              access_token: access_token,
-              refresh_token: refresh_token,
-            })
+          `${FRONTEND_URI}/#${querystring.stringify({
+            access_token,
+            refresh_token,
+          })}`
         );
       } else {
-        res.redirect(
-          "/#" +
-            querystring.stringify({
-              error: "invalid_token",
-            })
-        );
+        res.redirect(`/#${querystring.stringify({ error: "invalid_token" })}`);
       }
     });
   }
