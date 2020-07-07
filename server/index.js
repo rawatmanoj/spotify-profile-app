@@ -2,6 +2,7 @@ require("dotenv").config({ path: "../.env" });
 var express = require("express"); // Express web server framework
 var request = require("request"); // "Request" library
 var cors = require("cors");
+const path = require("path");
 var querystring = require("querystring");
 var cookieParser = require("cookie-parser");
 
@@ -31,12 +32,20 @@ var stateKey = "spotify_auth_state";
 
 var app = express();
 
+app.use(express.static(path.resolve(__dirname, "../client/build")));
+
 app
-  .use(express.static(__dirname + "/public"))
+  .use(express.static(path.resolve(__dirname, "../client/build")))
   .use(cors())
-  .use(cookieParser());
+  .use(cookieParser())
+  .use(express.static(path.resolve(__dirname, "../client/build")));
+
+app.get("/", function (req, res) {
+  res.render(path.resolve(__dirname, "../client/build/index.html"));
+});
 
 app.get("/login", function (req, res) {
+  console.log("h");
   var state = generateRandomString(16);
   res.cookie(stateKey, state);
 
@@ -104,21 +113,7 @@ app.get("/callback", function (req, res) {
         });
 
         // we can also pass the token to the browser to make requests from there
-        //   res.redirect(
-        //     "http://localhost:3000/#" +
-        //       querystring.stringify({
-        //         access_token: access_token,
-        //         refresh_token: refresh_token,
-        //       })
-        //   );
-        // } else {
-        //   res.redirect(
-        //     "/#" +
-        //       querystring.stringify({
-        //         error: "invalid_token",
-        //       })
-        //   );
-        // }
+
         res.redirect(
           `${FRONTEND_URI}/#${querystring.stringify({
             access_token,

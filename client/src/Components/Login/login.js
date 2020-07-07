@@ -6,7 +6,6 @@ const Login = () => {
       <div className="login_container">
         <h1>Spotify Profile</h1>
         <a href="http://localhost:8888/login">
-          {" "}
           <button size="lg" variant="success">
             login with Spotify
           </button>
