@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "server": "node app.js --prefix server",
     "client": "npm start --prefix client",
-    "dev": "concurrently \"npm install && cd server && node app.js\" \" npm install && npm run client\"",
+    "dev": "concurrently \"npm install && cd server && node app.js\" \" npm install && cd client && npm start\"",
     "start": "node server"
   },
   "author": "",
