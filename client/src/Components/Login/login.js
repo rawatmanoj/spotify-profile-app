@@ -12,7 +12,7 @@ const Login = () => {
         <h1>Spotify Profile</h1>
         <a href={LOGIN_URI}>
           <button size="lg" variant="success">
-            login with Spotify
+            LOG IN WITH SPOTIFY
           </button>
         </a>
       </div>
