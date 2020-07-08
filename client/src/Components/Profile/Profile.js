@@ -5,6 +5,8 @@ import { Context } from "../../store/store";
 import axios from "axios";
 import Spinner from "../Spinner/Spinner";
 import "./Profile.scss";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUser } from "@fortawesome/free-solid-svg-icons";
 
 const spotifyWebApi = new Spotify();
 const headers = {
@@ -60,11 +62,19 @@ const Profile = () => {
             <div className="profile-info-responsive">
               <div className="profile-info-container">
                 <div className="profile-image-container">
-                  <img
-                    className="profile-image"
-                    src={state.user.images[0].url}
-                    alt="profile"
-                  />
+                  {state.user.images[0] ? (
+                    <img
+                      className="profile-image"
+                      src={state.user.images[0].url}
+                      alt="profile"
+                    />
+                  ) : (
+                    <FontAwesomeIcon
+                      className="font-user-miss"
+                      color="white"
+                      icon={faUser}
+                    />
+                  )}
                 </div>
                 <div className="profile-name">
                   <h1>{state.user.display_name}</h1>

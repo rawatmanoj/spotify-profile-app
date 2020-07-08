@@ -17,6 +17,14 @@
   .profile-image-container {
     width: 16rem;
     height: 16rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    .font-user-miss {
+      font-size: 10rem;
+    }
 
     .profile-image {
       width: 100%;
